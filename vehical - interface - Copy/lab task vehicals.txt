@@ -1,0 +1,134 @@
+class Vehicals
+{
+	public String engineType ;
+ 
+	public String vehicalColour ;
+	
+
+
+	
+        public Vehicals()
+	    {
+		
+	    }
+	
+        public  Vehicals(String engineType ,String vehicalColour)
+	
+        {
+		this.engineType = engineType ;
+		this.vehicalColour = vehicalColour ;
+		
+	    }
+	
+
+
+        public void display()
+	{
+		System.out.println("Engine Type: "+engineType) ;
+		System.out.println("Vehical Colour: "+vehicalColour) ;
+		
+	}
+
+	
+}
+
+
+
+------------------------------------------------------------------------------------
+
+class MotorVehicals extends Vehicals
+{
+	public String motorType ;
+ 
+	public String vehicalType ;
+
+	
+        public MotorVehicals()
+	    {
+		
+	    }
+	
+        public  MotorVehicals (String engineType ,String vehicalColour, String motorType , String vehicalType)
+	
+        {
+		
+		super(engineType,vehicalColour);
+		this.motorType = motorType ;
+		this.vehicalType = vehicalType ;
+		
+	    }
+	
+        public void display()
+	{   
+	
+	    super.display();
+		System.out.println("Motor Type: "+motorType) ;
+		System.out.println("Vehical Type: "+vehicalType) ;
+		
+	}
+
+	
+}
+
+
+------------------------------------------------------
+
+
+class Bikes extends MotorVehicals
+{
+	public String model ;
+ 
+	public double price ;
+	
+	public String chassisNumber ;
+
+	
+        public Bikes()
+	    {
+		
+	    }
+	
+        public  Bikes (String motorType, String vehicalType,String engineType ,String vehicalColour,String model,double price,String chassisNumber)
+	
+        {
+		
+		super(motorType,vehicalType,engineType,vehicalColour);
+		this.model = model ;
+		this.price = price ;
+		this.chassisNumber = chassisNumber ;
+		
+	    }
+	
+
+
+        public void display()
+	{   
+	
+	    super.display();
+		System.out.println("Bike Model: "+model) ;
+		System.out.println("Bike price: "+price) ;
+		System.out.println("Bike Chassis Number: "+chassisNumber) ;
+		
+	}
+
+	
+}
+
+
+
+----------------------------------------------
+
+
+class Start
+{
+	public static void main(String arg[])
+   {
+   MotorVehicals M1 = new MotorVehicals("diesel engine", "Black", "4v", "bike");
+   M1.display();
+   Bikes B1 = new Bikes ("diesel engine", "Black", "4v", "bike" , "R15v3", 525000.0, "jh-1823659k" );
+   B1.display();
+   
+   }
+}
+	
+

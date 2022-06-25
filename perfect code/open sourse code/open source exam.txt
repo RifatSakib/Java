@@ -1,0 +1,138 @@
+public interface IVehicles
+{
+   public void runningHour();
+   public static void message()
+   {
+    System.out.println (" its interface Ivehicles");
+   }
+
+
+
+
+}
+
+----------------------------------------
+
+public interface IMotorVehicles extends IVehicles
+{
+   public void kindOfwheelDrive();
+
+   
+   public static void message()
+   {
+    System.out.println (" its interface IMotorVehicles");
+   }
+
+
+
+} 
+
+----------------------------------------
+
+class Vehicles
+
+ {
+	public String engineType ;
+ 
+	public String vehicleColour ;
+	
+
+
+	
+        public Vehicles()
+	    {
+		
+	    }
+	
+        public  Vehicles(String engineType ,String vehicleColour)
+	
+        {
+		this.engineType = engineType ;
+		this.vehicleColour = vehicleColour ;
+		
+	    }
+	
+
+
+        public void display()
+	{
+		System.out.println("Engine Type: "+engineType) ;
+		System.out.println("Vehical Colour: "+vehicleColour) ;
+		
+	}
+
+	
+  }
+
+-------------------------------------------
+
+
+class MotorVehicles extends Vehicles implements IMotorVehicles 
+{
+	public String motorType ;
+	public String vehicleType ;
+	public String kindOfwheelDrive ;
+	public double runningHour ;
+
+	
+        public MotorVehicles()
+	    {
+		
+	    }
+	
+        public  MotorVehicles (String engineType ,String vehicleColour, String kindOfwheelDrive,double runningHour,String motorType , String vehicleType )
+	
+        {
+		
+		super(engineType,vehicleColour);
+		this.kindOfwheelDrive = kindOfwheelDrive ;
+		this.runningHour = runningHour ;
+		this.motorType = motorType ;
+		this.vehicleType = vehicleType ;
+		
+	    }
+	
+        public void display()
+	{   
+	
+	    super.display();
+		System.out.println("Motor Type: "+motorType) ;
+		System.out.println("vehicle Type : "+vehicleType) ;
+		
+	}
+     public void kindOfwheelDrive()
+	 {
+		 System.out.println("kindOfwheelDrive "+kindOfwheelDrive) ;
+ 
+	 }
+	 
+	    public void runningHour()
+		
+		{
+			
+		System.out.println("Running Hour " +runningHour) ;	
+			
+		}
+	
+}
+
+--------------------------------------------------------
+
+class Start
+{
+	public static void main(String arg[])
+   {
+   
+   
+   MotorVehicles M1 = new MotorVehicles("diesel engine", "Black","front", 6.5, "4v", "bike");
+   M1.display();
+   M1.kindOfwheelDrive();
+   M1.runningHour();
+   
+   }
+}
+	
+
+
+
+

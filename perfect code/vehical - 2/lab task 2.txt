@@ -1,0 +1,144 @@
+
+lab task 2
+
+class Vehicals
+{
+	public String name ;
+	public int plateNumber ;
+	public int wheelNumber ;
+	
+        public Vehicals()
+	    {
+		
+	    }
+		
+        public  Vehicals(String name ,int plateNumber, int wheelNumber)
+	
+        {
+		this.name = name ;
+		this.plateNumber = plateNumber ;
+		this.wheelNumber = wheelNumber ;
+		}
+	    public void start()
+		
+		{
+			System.out.println(" welcome. 0 km run ");
+			
+		}	   
+
+		public void Break()
+		
+		{
+			System.out.println(" this is break ");
+			
+		}
+		public void stop()
+		
+		{
+			System.out.println(" this is stop. ");
+			
+		}
+	
+      
+        public void show()
+	{
+		System.out.println("name: "+name) ;
+		System.out.println("plateNumber: "+plateNumber) ;
+		System.out.println("wheelNumber: "+wheelNumber) ;
+		
+	}
+
+	
+}
+
+
+
+------------------------------------------------------------------------------
+
+
+
+class Bikes extends Vehicals
+{
+	public String brandName ;
+ 
+
+        public Bikes()
+	    {
+		
+	    }
+	
+        public  Bikes (String name ,int plateNumber, int wheelNumber, String brandName)
+	
+        {
+		
+		super(name,plateNumber,wheelNumber);
+		this.brandName = brandName ;
+			
+	    }
+	
+    public void show()
+	{   System.out.println("name: "+name) ;
+		System.out.println("plateNumber: "+plateNumber) ;
+		System.out.println("wheelNumber: "+wheelNumber) ;
+		System.out.println("brandName: "+brandName) ;
+				
+	}
+
+
+	
+}
+
+------------------------------------------------------------------
+
+class Car extends Vehicals
+{
+	public String brandName ;
+	public int seatNumber ;
+ 
+
+        public Car()
+	    {
+		
+	    }
+		
+        public  Car(String name ,int plateNumber, int wheelNumber, String brandName,int seatNumber)
+        {
+		super(name,plateNumber,wheelNumber);
+		this.brandName = brandName ;
+		this.seatNumber = seatNumber ;
+	    }
+		
+	    public void show()
+	{   System.out.println("name: "+name) ;
+		System.out.println("plateNumber: "+plateNumber) ;
+		System.out.println("wheelNumber: "+wheelNumber) ;
+		System.out.println("brandName: "+brandName) ;
+		System.out.println("seatNumber: "+seatNumber) ;
+				
+	}
+	
+}
+
+--------------------------------------------
+
+class Main
+{
+	public static void main(String arg[])
+   {
+   Vehicals v = new Vehicals ( "motor vehicals", 101 , 4 );
+   v.show(); 
+   v = new Bikes ( "motor vehicals", 101 , 4, "honda");
+   v.show();
+   v = new Car ( "motor vehicals", 101 , 4, "honda",2);
+   v.show();
+   Bikes b = new Bikes ( "motor vehicals", 101 , 4, "honda");
+   b.show();
+   Car c = new Car ("motor vehicals", 101 , 4, "honda",2);
+   c.show();
+     
+   }
+}
+	
+
+
+

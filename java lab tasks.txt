@@ -1,0 +1,270 @@
+task 1:
+
+
+class Employee
+{
+	public String Name;
+    public String ID; 
+    private String phoneNo;
+    public String email;
+   private EmpSalary salary;
+
+	
+        public Employee()
+	    {
+		
+	    }
+	
+        public  Employee (String Name, String ID, String phoneNo ,String email,EmpSalary salary)
+	
+        {
+		
+		this.Name = Name ;
+		this.ID = ID ;
+		this.phoneNo = phoneNo ;
+		this.email = email ;
+		this.salary = salary ;
+	    }
+	
+       public void setphone(String phoneNo)
+	   {
+	        this.phoneNo = phoneNo ;
+	   
+	   }
+	     public String getphone()
+	   {
+	       return this.phoneNo = phoneNo ;
+	   
+	   }
+	   
+	   public void setsalary(EmpSalary salary)
+	   {
+	        this.salary = salary ;
+	   
+	   }
+	     public double getsalary()
+	   {
+	       return this.salary = salary ;
+	   
+	   }
+
+        public void show()
+	{   
+	
+		System.out.println("Name: "+Name) ;
+		System.out.println("ID: "+ID) ;
+		System.out.println("phoneNo: "+phoneNo) ;
+		System.out.println("email: "+email) ;
+		System.out.println("basicAmout: "+salary.basicAmout+ "festivalBonus: "+salary.festivalBonus+ "overtimeAmount: "+salary.overtimeAmount) ;
+		
+	}
+
+	
+}
+
+---------------------------------------------------------------------------------
+
+class EmpSalary
+{
+	private double basicAmout;
+    private double festivalBonus;
+    private double overtimeAmount;
+
+        public EmpSalary()
+	    {
+		
+	    }
+	
+        public  EmpSalary(double basicAmout, double festivalBonus, double overtimeAmount)
+	
+        {
+		this.basicAmout = basicAmout ;
+		this.festivalBonus = festivalBonus ;
+		this.overtimeAmount = overtimeAmount ;
+	    }
+	
+      
+
+	  public void setbAmout(double basicAmout)
+	   {
+	      this.basicAmout = basicAmout ;
+	   }
+	     
+		 public double getbAmout() 
+	   {
+	       return this.basicAmout = basicAmout ;
+	   
+	   }
+	   
+	    public void setfBonus(double festivalBonus)
+	   {
+	        this.festivalBonus = festivalBonus ;
+	   
+	   }
+	    
+
+		public double getfBonus()
+	   {
+	       return this.festivalBonus = festivalBonus ;
+	   
+	   }
+	   
+	   
+	   public void setotAmount(double overtimeAmount)
+	   {
+	        this.overtimeAmount = overtimeAmount ;
+	   
+	   }
+	    
+
+		public double getotAmount()
+	   {
+	       return this.overtimeAmount = overtimeAmount ;
+	   
+	   }
+
+       
+
+	   public void show()
+	{   
+		System.out.println("basicAmout: "+basicAmout) ;
+		System.out.println("festivalBonus: "+festivalBonus) ;
+		System.out.println("overtimeAmount: "+overtimeAmount) ;		
+			
+	}
+
+	
+}
+
+------------------------------------------------------
+
+
+class MainEmployee
+{
+	public static void main(String arg[])
+   {
+    EmpSalary salary = new EmpSalary(2000.50, 1000.50, 500.200);
+    Employee e = new Employee (""Rifat","19-36","017-91***","kopasamsu@gmail.com", salary)
+    e.show();
+   }
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+task 2:
+
+
+
+
+
+class Library
+{
+	public String name
+public String address
+public Book book[] 
+
+
+	
+       public Library()
+	    {
+		
+	    }
+	
+        public Library(String Name, String address, Book book1,Book book2)
+	
+        {
+		
+		this.Name = Name ;
+		this.address = address ;
+		this.book[0]  = book1 ;
+		this.book[1]  = book2 ;
+	    }
+	
+      
+        public void show()
+	{   
+	
+		System.out.println("Name: "+Name) ;
+		System.out.println("address: "+address) ;
+		System.out.println("book: "+book[0]) ;
+		System.out.println("book: "+book[1]) ;
+				
+	}
+
+	
+}
+------------------------------------------------------
+class class Book
+{
+	public String bookName
+public String authorName
+public int noOfCopy
+
+
+        public Book()
+	    {
+		
+	    }
+	
+        public  Book(String bookName, String authorName, int noOfCopy)
+	
+        {
+		this.bookName = bookName ;
+		this.authorName = authorName ;
+		this.noOfCopy = noOfCopy ;
+	    }
+	
+      
+
+	  
+
+	   public void show()
+	{   
+		System.out.println("bookName: "+bookName) ;
+		System.out.println("authorName: "+authorName) ;
+		System.out.println("noOfCopy: "+noOfCopy) ;		
+			
+	}
+
+	
+}
+	
+
+----------------------------------------------------
+
+
+class MainBook
+{
+	public static void main(String arg[])
+   {
+    Book book = new Book(""octarin","abc",10)
+    Library b = new Library ("octarin", "asaj",book,book);
+    b.show();
+   }
+}
+	

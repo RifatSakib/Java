@@ -1,0 +1,36 @@
+Interfaces-
+>CourseOperation
+>GradeOperation
+>StudentOperation
+
+Classes-
+>Course
+>LabCourse
+>TheoryCourse
+>Student
+>University
+
+>Main (This is main class)
+
+Packages
+>classes, fileio, interfaces  these three folders are three packages.
+
+File ReadWrite
+>CourseDetails
+>GradeDetails
+
+Association
+>University has many Students
+
+Other OOP Concepts
+>Exception Handling(IOException, Null Pointer exception, InputMismatch Exception)
+>Abstraction (Course is an Abstract class, showInfo is an Abstract method)
+
+Encapsulation
+> All the classes are encapsulation
+
+Inheritance
+>Theory course and Lab course inherit properties from their parent class Course
+
+Polymorphism
+>Method Overriding(showInfo is parent class>course and we use this reference is child class>theorycourse,labcourse)

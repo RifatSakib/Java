@@ -1,0 +1,99 @@
+public interface IShape
+{
+   public void calculateArea();
+  
+
+}
+
+--------------------------------
+
+public interface IParameter extends IShape
+{
+   public void calculateParameter();
+
+   
+} 
+
+----------------------------
+
+
+class Shape 
+{
+	double height;
+    double width;
+
+	
+        public Shape()
+	    {
+		
+	    }
+	
+        public Shape(double height ,double width)
+	
+        {
+		this.height = height ;
+		this.width = width ;
+		
+	    }
+
+    
+
+	
+}
+
+----------------------------
+
+class Rectangle extends Shape implements IParameter 
+{
+
+        public Rectangle()
+	    {
+		
+	    }
+	
+        public  Rectangle(double height ,double width )
+	
+        {
+		super(height,width);
+		
+		
+	    }
+	
+
+
+        public void calculateArea()
+	{
+		System.out.println("area: "+(height*width)) ;
+		
+	}
+	
+        
+        public void calculateParameter()
+	{   
+	
+	    System.out.println("height: "+height) ;
+		System.out.println("width: "+width) ;
+			
+		
+	}
+	
+}
+     
+
+
+-----------------------------
+
+
+class Start1
+{
+	public static void main(String arg[])
+   {
+   
+   
+   Rectangle r1 = new Rectangle( 6.5,5.8);
+   r1.calculateArea();
+   r1.calculateParameter();
+   
+   }
+}
+	
